@@ -1,0 +1,206 @@
+<html>
+  <head>
+    <title>Web20-C4</title>
+  </head>
+  <style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+h1, h2 {
+  margin: 0;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+a:hover {
+  color: #0056b3;
+}
+.add{
+  padding:15px;
+  background-color:red;
+  color: white;
+  width: 15%;
+  text-align: center;
+  cursor:pointer;
+
+
+}
+/* Navbar Styles */
+#navbar {
+  background-color: #007bff;
+  
+  color: white;
+  padding: 10px ;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#navbar div{
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+
+#navbar h2 {
+  margin-left: 20px;
+  font-size: 1.5em;
+}
+
+#navbar div a {
+  margin: 0 15px;
+  color: white;
+  font-size: 1.1em;
+}
+#navbar div a h2:hover {
+ 
+  color: white;
+ 
+}
+
+/* Filter and Task Count Styles */
+#filter {
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 50%;
+  font-size: 1em;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#task-count {
+  color: #007bff;
+}
+
+/* Table Styles */
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #e9ecef;
+  transition: background-color 0.3s ease;
+}
+
+
+
+
+
+/* Animation Styles */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  animation: fadeIn 1s ease-in;
+}
+
+#navbar, #filter, h1, table {
+  animation: fadeIn 1s ease-in;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  #navbar h2 {
+    font-size: 1.2em;
+  }
+
+  #navbar div a {
+    margin: 0 10px;
+    font-size: 0.9em;
+  }
+
+  table {
+    width: 100%;
+    font-size: 0.9em;
+  }
+
+  #filter {
+    width: 90%;
+  }
+}
+
+  </style>
+  <body>
+    <div id="navbar">
+      <h2>Task Manager</h2>
+      <div>
+        <a href="./index.html">
+          <h2>Home</h2>
+        </a>
+        <a href="./dashboard.html">
+          <h2>Dashboard</h2>
+        </a>
+        <a href="./Progress.html">
+          <h2>In-Progress</h2>
+        </a>
+        <a href="./Done.html">
+          <h2>Done</h2>
+        </a>
+      </div>
+    </div>
+    <select id="filter">
+      <option value="">Select Priority</option>
+      <option value="Low">Low</option>
+      <option value="Medium">Medium</option>
+      <option value="High">High</option>
+    </select>
+    <h1>Total Task:- <span id="task-count">0</span></h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Priority</th>
+          <th>Add To Progress</th>
+        </tr>
+      </thead>
+      <tbody>
+         <!-- Update the rows here using jsvascript -->
+      </tbody>
+    </table>
+  </body>
+  <script src="./dashboard.js"></script>
+</html>

@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <title>Web20-C4</title>
+  </head>
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+    }
+    h2{
+      color: #333;
+    }
+    #navbar {
+      display: flex;
+      height: 70px;
+      padding: 10px;
+      justify-content: space-between;
+      background-color:blue;
+    }
+
+    
+    #navbar div{
+      display: flex;
+      justify-content: space-between;
+     width: 50%;
+    }
+    #navbar div a{
+      margin: 0 15px;
+      padding: 10px;
+    }
+    a{
+      text-decoration: none;
+    }
+    #navbar div a h2:hover{
+      color: white;
+    }
+
+    table{
+      width: 90%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 12px;
+      text-align:center;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    th {
+      background-color: #007bff;
+      color: white;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    tr:hover {
+      background-color: #e9ecef;
+      transition: background-color 0.3s ease;
+    }
+
+
+    .done{
+      background-color: green;
+      cursor: pointer;
+      color: white;
+    }
+    
+   
+
+  </style>
+  <body>
+    <div id="navbar">
+      <h2> Task Manager</h2>
+      <div>
+        <a href="./index.html">
+          <h2>Home</h2>
+        </a>
+        <a href="./dashboard.html">
+          <h2>Dashboard</h2>
+        </a>
+        <a href="./Progress.html">
+          <h2>In-Progress</h2>
+        </a>
+        <a href="./Done.html">
+          <h2>Done</h2>
+        </a>
+      </div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Priority</th>
+          <th>Add To Done</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Update the rows here using jsvascript -->
+      </tbody>
+    </table>
+  </body>
+  <script src="./progress.js"></script>
+</html>
